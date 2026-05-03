@@ -11,6 +11,13 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    proxy: {
+      '/api/adsb': {
+        target: 'https://api.adsb.lol',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/adsb/, '')
+      }
+    }
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
