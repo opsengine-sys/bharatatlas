@@ -807,7 +807,6 @@ const Flights = () => {
         .custom-scrollbar::-webkit-scrollbar-thumb { background: hsl(var(--muted)); border-radius: 10px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground)); }
       `}</style>
->>>>>>> 9858bbe (Updated flight feature)
     </div>
   );
 };
